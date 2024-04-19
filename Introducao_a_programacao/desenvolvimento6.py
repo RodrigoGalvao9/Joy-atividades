@@ -16,9 +16,10 @@ def sendo_invasivo():
             if ano_nascimento not in range(1922, 2022):
                 raise ValueError("Digite um número válido entre 1922 e 2021")
             else:
-                return nome, ano_nascimento
+                idade = 2022 - ano_nascimento
+                return nome, idade
         except ValueError as e:
             print(e)
             
-nome, ano_nascimento = sendo_invasivo()
-print("Nome:", nome, "Seu ano de nascimento:", ano_nascimento)
+nome, idade = sendo_invasivo()
+print(f"Nome: {nome} Sua idade é: {idade}")
