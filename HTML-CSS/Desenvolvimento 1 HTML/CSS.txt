@@ -1,0 +1,31 @@
+1 - <header></header> 
+
+2 – <main></main> 
+
+3 - <nav></nav> 
+
+4 - <img></img> 
+
+5 - <h1></h1> 
+
+6 - <h2></h2> 
+
+7 - <p></p> 
+
+8 - <a></a> 
+
+9 -  <footer></footer> 
+
+10 - <ul></ul> 
+
+11 - <li></li> 
+
+12 - <form></form> 
+
+13 -  <label></label> 
+
+14 - <input> 
+
+15 - <select></select> 
+
+16 - <button></button> 
