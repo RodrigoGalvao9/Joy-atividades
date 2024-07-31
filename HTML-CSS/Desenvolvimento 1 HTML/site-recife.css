@@ -8,6 +8,9 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* Cabeçalho */
@@ -30,6 +33,7 @@ header p {
 /* Conteúdo Principal */
 main {
     padding: 20px;
+    flex: 1;
 }
 
 main h2 {
@@ -40,13 +44,32 @@ main p {
     margin-bottom: 15px;
 }
 
-/* Imagens */
-img {
+/* Seções com Flexbox */
+section {
+    margin-bottom: 20px;
+}
+
+section img {
     max-width: 100%;
     height: auto;
     border: 2px solid #ddd;
     border-radius: 5px;
-    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.05);
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section h2, section p {
+    max-width: 800px;
+    text-align: center;
 }
 
 /* Links */
@@ -65,10 +88,9 @@ footer {
     color: white;
     text-align: center;
     padding: 10px 0;
-    position: absolute;
+    position: relative;
     width: 100%;
     bottom: 0;
-    margin-top: 5px ;
 }
 
 footer p {
@@ -77,4 +99,23 @@ footer p {
 
 footer a {
     color: #FFD700;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    section img {
+        flex: 1;
+        max-width: 40%;
+    }
+
+    section h2, section p {
+        flex: 1;
+        max-width: 55%;
+        text-align: left;
+    }
 }
